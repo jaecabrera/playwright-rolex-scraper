@@ -1,0 +1,13 @@
+[project]
+name = "playwright-rolex"
+version = "0.1.0"
+description = "Scraper for Chrono24"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas-flavor>=0.6.0",
+    "pandas>=2.2.3",
+    "playwright>=1.49.1",
+    "pyjanitor>=0.30.0",
+    "pytest-playwright>=0.6.2",
+]
