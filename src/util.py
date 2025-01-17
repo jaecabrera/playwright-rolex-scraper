@@ -1,7 +1,9 @@
 from datetime import datetime
 from typing import Union, Dict, Any, List, Type
 import pandas as pd
-pd.options.display.max_rows = 100
+import janitor
+
+
 JSON = Union[Dict[str, Any], List[Any], int, str, float, bool, Type[None]]
 
 

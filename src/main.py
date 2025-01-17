@@ -65,7 +65,7 @@ async def run(playwright: Playwright):
 
                 # Pagination Block
                 await page.goto(next_page_link)
-                scrape_logger.info(msg=f'Item data in {page_counter} added to dataframe.')
+                scrape_logger.debug(msg=f'Item data in {page_counter} added to dataframe.')
                 page_counter += 1
 
                 # Go to next page.
@@ -82,7 +82,7 @@ async def run(playwright: Playwright):
         await browser.close()
 
     empty_df.to_csv(SAVE_PATH)
-    scrape_logger.info(msg=f'Scrape session success.')
+    scrape_logger.debug(msg=f'Scrape session success.')
 
 
 async def main():

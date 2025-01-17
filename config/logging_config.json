@@ -1,25 +1,30 @@
 {
     "version": 1,
-    "disable_existing_loggers": "False",
+    "disable_existing_loggers": false,
     "formatters": {
-      "simple":  {
-        "format":  "%(asctime)s | %(filename)s | %(funcName)s | %(levelname)s: %(message)s",
-        "datefmt": "%Y-%m-%dT%H:%M:%S%z"
-      }},
-    "handlers": {
-      "file": {
-        "class": "logging.handlers.RotatingFileHandler",
-        "level": "DEBUG",
-        "formatter": "simple",
-        "filename": "logger/logs/scraper.log",
-        "maxBytes": 5000000,
-        "backupCount": 3
-      }
+        "simple": {
+            "format": "%(asctime)s | %(filename)s | %(funcName)s | %(levelname)s: %(message)s",
+            "datefmt": "%Y-%m-%dT%H:%M:%S%z"
+        }
     },
-  "loggers": {
+    "handlers": {
+        "file": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "INFO",
+            "formatter": "simple",
+            "filename": "logger/logs/scraper.log",
+            "maxBytes": 5000000,
+            "backupCount": 3
+        },
+        "console": {
+            "class": "logging.StreamHandler",
+            "level": "DEBUG",
+            "formatter": "simple",
+            "stream": "ext://sys.stdout"
+        }
+    },
     "root": {
-      "level": "DEBUG",
-      "handlers": ["file"]
+        "level": "DEBUG",
+        "handlers": ["file", "console"]
     }
-  }
 }
