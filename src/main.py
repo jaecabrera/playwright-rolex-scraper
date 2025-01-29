@@ -33,7 +33,8 @@ async def run(playwright: Playwright):
         await page.goto("https://www.chrono24.com/rolex/index.htm?man=rolex&showpage=")
 
         # Locate paging element from the website and get the link for the next page.
-        link_locator = page.locator("a.paging-next")
+        # link_locator = page.locator("a.paging-next")
+        link_locator = page.get_by_role("link", name="Next", exact=True).first
         next_page_link = await link_locator.get_attribute('href')
 
         # Page counter variable for logging

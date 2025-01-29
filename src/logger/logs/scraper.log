@@ -4906,3 +4906,9 @@ playwright._impl._errors.TargetClosedError: Target page, context or browser has 
 Call log:
   - waiting for locator("a.paging-next")
 
+2025-01-24T13:55:26+0800 | base_events.py | default_exception_handler | ERROR: Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed\nCall log:\n  - navigating to "https://www.chrono24.com/rolex/index-211.htm", waiting until "load"\n')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://www.chrono24.com/rolex/index-211.htm", waiting until "load"
+
